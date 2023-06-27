@@ -3,6 +3,7 @@ import { apiGetAllPokemon } from '../Api'
 import { PokemonCard } from '../Components/PokemonCard'
 import { GlobalContext } from '../Context'
 import { Loader } from '../Components/Loader'
+import { Pager } from '../Components/Pager'
 
 export function Home () {
   const [allPokemons, setAllPokemon] = useState([])
@@ -22,7 +23,6 @@ export function Home () {
 
     getPokemons()
   }, [numPokemons])
-
   return (
     <div className="container mt-3">
       {isLoad ? null : <Loader />}
@@ -50,7 +50,7 @@ export function Home () {
             )
           })}
       </div>
-
+      {<Pager lPOkemons={allPokemons}/>}
     </div>
 
   )
