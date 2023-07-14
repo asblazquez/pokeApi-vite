@@ -23,3 +23,17 @@ export const COLORES_TIPOS = {
   flying: '#81B9EF',
   '???': '#6BA294'
 }
+
+export const PAGER_OPTIONS = {
+  previousLabel: 'Anterior',
+  nextLabel: 'Siguiente',
+  containerClassName: 'row justify-center',
+  activeClassName: 'is-disabled',
+  pageClassName: 'nes-button',
+  previousClassName: 'nes-button is-primary',
+  previousLinkClassName: 'nes-pointer',
+  nextClassName: 'nes-button is-primary',
+  nextLinkClassName: 'nes-pointer',
+  disabledClassName: 'is-disabled',
+  breakClassName: 'nes-brake'
+}

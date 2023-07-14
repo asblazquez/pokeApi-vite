@@ -4,6 +4,7 @@ import { PokemonCard } from '../Components/PokemonCard'
 import { GlobalContext } from '../Context'
 import { Loader } from '../Components/Loader'
 import ReactPaginate from 'react-paginate'
+import { PAGER_OPTIONS } from '../Constantes'
 
 export function Home () {
   const { numPokemons, updateNumPokemons } = useContext(GlobalContext)
@@ -60,19 +61,9 @@ export function Home () {
       </div>
       <div className='mt-3'>
         <ReactPaginate
-          previousLabel={'Anterior'}
-          nextLabel={'Siguiente'}
           pageCount={Math.ceil(allPokemons.length / numPokemons)}
           onPageChange={changePage}
-          containerClassName={'row justify-center'}
-          activeClassName={'is-disabled'}
-          pageClassName={'nes-button'}
-          previousClassName={'nes-button is-primary'}
-          nextClassName={'nes-button is-primary'}
-          previousLinkClassName={'nes-pointer'}
-          nextLinkClassName={'nes-pointer'}
-          disabledClassName={'is-disabled'}
-          breakClassName={'nes-brake'}
+          {...PAGER_OPTIONS}
         />
       </div>
     </div>
