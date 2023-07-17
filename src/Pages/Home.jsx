@@ -5,6 +5,7 @@ import { GlobalContext } from '../Context'
 import { Loader } from '../Components/Loader'
 import ReactPaginate from 'react-paginate'
 import { PAGER_OPTIONS } from '../Constantes'
+import { DropDown } from '../Components/DropDown'
 
 export function Home () {
   const { numPokemons, updateNumPokemons } = useContext(GlobalContext)
@@ -14,10 +15,11 @@ export function Home () {
   const [pageNumber, setPageNumber] = useState(0)
   const pagesVisited = pageNumber * numPokemons
 
-  // const handleRangeChange = (event) => {
-  //   const newValue = event.target.value
-  //   updateNumPokemons(newValue)
-  // }
+  const handleSelectChange = (event) => {
+    console.log(event.target.value)
+    const newValue = event.target.value
+    updateNumPokemons(newValue)
+   }
 
   useEffect(() => {
     const getPokemons = () => {
@@ -59,12 +61,13 @@ export function Home () {
       <div className='pokemonList mt-3'>
           {displayPokemons}
       </div>
-      <div className='mt-3'>
+      <div className='mt-3 row justify-center'>
         <ReactPaginate
           pageCount={Math.ceil(allPokemons.length / numPokemons)}
           onPageChange={changePage}
           {...PAGER_OPTIONS}
         />
+        <DropDown options={['8', '24', '30', '40']} handleSelectChange={handleSelectChange}/>
       </div>
     </div>
   )

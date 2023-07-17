@@ -27,7 +27,7 @@ export const COLORES_TIPOS = {
 export const PAGER_OPTIONS = {
   previousLabel: 'Anterior',
   nextLabel: 'Siguiente',
-  containerClassName: 'row justify-center',
+  containerClassName: 'col-md-8 col-12 row justify-center',
   activeClassName: 'is-disabled',
   pageClassName: 'nes-button',
   previousClassName: 'nes-button is-primary',
