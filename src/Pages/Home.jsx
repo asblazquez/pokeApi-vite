@@ -19,7 +19,7 @@ export function Home () {
     console.log(event.target.value)
     const newValue = event.target.value
     updateNumPokemons(newValue)
-   }
+  }
 
   useEffect(() => {
     const getPokemons = () => {
