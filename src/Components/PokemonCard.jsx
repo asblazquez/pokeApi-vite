@@ -1,9 +1,10 @@
 import { COLORES_TIPOS } from '../Constantes'
+import { Link } from 'react-router-dom'
 
 export function PokemonCard (props) {
   const { pokemon } = props
   return (
-        <div className="pokemonCard nes-pointer">
+        <Link to={'/pokemon/' + pokemon.id} className="pokemonCard nes-pointer">
             <div className="imgPokemonCard">
                 <img src={pokemon.sprites.front_default} alt="Imagen de pokemon"/>
             </div>
@@ -28,6 +29,6 @@ export function PokemonCard (props) {
                     })}
                 </div>
             </div>
-        </div>
+        </Link>
   )
 }

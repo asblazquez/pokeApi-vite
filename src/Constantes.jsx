@@ -1,5 +1,6 @@
 export const URL = {
-  allPokemons: 'https://pokeapi.co/api/v2/pokemon?limit='
+  allPokemons: 'https://pokeapi.co/api/v2/pokemon?limit=',
+  pokemon: 'https://pokeapi.co/api/v2/pokemon/'
 }
 
 export const COLORES_TIPOS = {

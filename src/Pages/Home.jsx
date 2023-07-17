@@ -16,7 +16,7 @@ export function Home () {
   const pagesVisited = pageNumber * numPokemons
 
   const handleSelectChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     const newValue = event.target.value
     updateNumPokemons(newValue)
   }

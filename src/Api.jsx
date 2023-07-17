@@ -16,3 +16,13 @@ export async function apiGetAllPokemon (setResult, limit, setLoad) {
     console.error('Error al obtener los Pokémon:', error)
   }
 }
+
+export async function apiGetPokemon (id, setResult, setLoad) {
+  try {
+    const response = await axios.get(URL.pokemon + id)
+    setResult(response.data)
+    setLoad(true)
+  } catch (error) {
+    console.error('Error al obtener el Pokémon:', error)
+  }
+}
