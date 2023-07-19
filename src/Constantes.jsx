@@ -40,8 +40,12 @@ export const PAGER_OPTIONS = {
 }
 
 export const POKEMONS_SPRITES = {
-  'front default male': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
-  'front default female': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/',
-  'front shiny male': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/',
-  'front shiny female': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/'
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/': 'front default male',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/': 'front default female',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/': 'front shiny male',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/': 'front shiny female',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/': 'back default male',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/': 'back default female',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/': 'back shiny male',
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/': 'back shiny female'
 }
