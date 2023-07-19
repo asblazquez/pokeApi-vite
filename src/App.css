@@ -691,3 +691,47 @@ body {
 .w-full {
     width: -webkit-fill-available;
 }
+
+.btn-toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-toTop:hover {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-toTop:focus {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-toTop:active {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-toTop:focus-visible {
+    border: none;
+    background-color: transparent;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.backGroudSlideImage {
+    background-image: url('./assets/FondoCombate.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

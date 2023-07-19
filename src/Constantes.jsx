@@ -38,3 +38,10 @@ export const PAGER_OPTIONS = {
   disabledClassName: 'is-disabled',
   breakClassName: 'nes-brake'
 }
+
+export const POKEMONS_SPRITES = {
+  'front default male': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
+  'front default female': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/',
+  'front shiny male': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/',
+  'front shiny female': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/'
+}
