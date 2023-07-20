@@ -25,6 +25,15 @@ export const COLORES_TIPOS = {
   '???': '#6BA294'
 }
 
+export const COLORES_STATS = {
+  hp: '#FF0000',
+  attack: '#FF8000',
+  defense: '#FAC000',
+  'special-attack': '#3FD8FF',
+  'special-defense': '#3FA129',
+  speed: '#EF4179'
+}
+
 export const PAGER_OPTIONS = {
   previousLabel: 'Anterior',
   nextLabel: 'Siguiente',

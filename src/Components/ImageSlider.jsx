@@ -5,12 +5,11 @@ import { POKEMONS_SPRITES } from '../Constantes'
 
 export function ImageSlider (props) {
   const { images, id } = props
-  console.log(images)
-  console.log(POKEMONS_SPRITES[images[6].slice(0, images[0].length - (id + '.png').length)])
+
   return (
         <div className='slide-container col-md-6 col-12 backGroudSlideImage'>
             <Slide>
-                {images.map((image, index) => {
+                {images.filter(image => typeof image === 'string').map((image, index) => {
                   return (
                     typeof image === 'string'
                       ? <div className='each-slide justify-center row mt-3' key={index}>
