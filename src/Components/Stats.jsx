@@ -15,7 +15,7 @@ export function Stats (props) {
   }, [stats])
 
   return (
-        <div className="row mt-5 col-6 mx-auto">
+        <div className="row col-6 mx-auto">
                 {stats.map((stat, index) => {
                   return (
                     <div key={index} className="col-md-6 col-12 text-center mt-3">

@@ -4,14 +4,21 @@ const GlobalContext = createContext()
 
 const GlobalProvider = ({ children }) => {
   const [numPokemons, setNumPokemons] = useState(30)
+  const [numItems, setNumItems] = useState(30)
 
   const updateNumPokemons = (num) => {
     setNumPokemons(num)
   }
 
+  const updateNumItems = (num) => {
+    setNumItems(num)
+  }
+
   const contextValue = {
     numPokemons,
-    updateNumPokemons
+    updateNumPokemons,
+    numItems,
+    updateNumItems
   }
 
   return (

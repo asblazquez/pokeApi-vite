@@ -552,6 +552,7 @@ body {
     background-color: rgb(255, 230, 0);
     border: 5px solid rgba(213, 149, 0);
     text-align: center;
+    max-width: 20rem;
 }
 
 .pokemonList {

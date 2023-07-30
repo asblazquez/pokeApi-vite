@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react'
-import { apiGetAllPokemon } from '../Api'
-import { PokemonCard } from '../Components/PokemonCard'
+import { apiGetAllItems } from '../Api'
+import { ItemCard } from '../Components/ItemCard'
 import { GlobalContext } from '../Context'
 import { Loader } from '../Components/Loader'
 import ReactPaginate from 'react-paginate'
@@ -8,33 +8,33 @@ import { PAGER_OPTIONS } from '../Constantes'
 import { DropDown } from '../Components/DropDown'
 import { ButtonToTop } from '../Components/ButtonToTop'
 
-export function Home () {
-  const { numPokemons, updateNumPokemons } = useContext(GlobalContext)
+export function Items () {
+  const { numItems, updateNumItems } = useContext(GlobalContext)
 
-  const [allPokemons, setAllPokemon] = useState([])
-  const [filteredPokemons, setFilteredPokemons] = useState([])
+  const [allItems, setAllItems] = useState([])
+  const [filteredItems, setFilteredItems] = useState([])
   const [inputClass, setInputClass] = useState('is-success')
   const [isLoad, setIsLoad] = useState(false)
   const [pageNumber, setPageNumber] = useState(0)
-  const pagesVisited = pageNumber * numPokemons
+  const pagesVisited = pageNumber * numItems
   const [isVisible, setIsVisible] = useState(false)
 
   const handleSearchChange = (event) => {
     event.preventDefault()
     const newValue = event.target.value
-    const filteredPokemons = allPokemons.filter(pokemon => pokemon.name.includes(newValue.toLowerCase()))
-    if (filteredPokemons.length === 0 && newValue !== '') {
+    const filteredItems = allItems.filter(item => item.name.includes(newValue.toLowerCase()))
+    if (filteredItems.length === 0 && newValue !== '') {
       setInputClass('is-error')
     } else {
       setInputClass('is-success')
-      setFilteredPokemons(filteredPokemons)
+      setFilteredItems(filteredItems)
     }
   }
 
   const handleSelectChange = (event) => {
     event.preventDefault()
     const newValue = event.target.value
-    updateNumPokemons(newValue)
+    updateNumItems(newValue)
   }
 
   const handleScroll = () => {
@@ -44,11 +44,11 @@ export function Home () {
   useEffect(() => {
     const getPokemons = () => {
       setIsLoad(false)
-      apiGetAllPokemon(setAllPokemon, '1000', setIsLoad)
+      apiGetAllItems(setAllItems, '1000', setIsLoad)
     }
 
     getPokemons()
-  }, [numPokemons])
+  }, [numItems])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -59,22 +59,22 @@ export function Home () {
     setPageNumber(selected)
   }
 
-  const displayPokemons = (
-    filteredPokemons.length === 0
-      ? allPokemons
-        .slice(pagesVisited, pagesVisited + numPokemons)
-        .map((pokemon) => (
-          <PokemonCard pokemon={pokemon} key={pokemon.id}/>
+  const displayItems = (
+    filteredItems.length === 0
+      ? allItems
+        .slice(pagesVisited, pagesVisited + numItems)
+        .map((item) => (
+            <ItemCard item={item} key={item.id}/>
         ))
-      : filteredPokemons
-        .slice(pagesVisited, pagesVisited + numPokemons)
-        .map((pokemon) => (
-          <PokemonCard pokemon={pokemon} key={pokemon.id}/>
+      : filteredItems
+        .slice(pagesVisited, pagesVisited + numItems)
+        .map((item) => (
+            <ItemCard item={item} key={item.id}/>
         ))
   )
-  console.log(allPokemons)
+  console.log(allItems)
   return (
-    <>
+        <>
       {isVisible ? <ButtonToTop /> : null}
       <div className="container-fluid mt-3">
         {isLoad ? null : <Loader />}
@@ -87,11 +87,11 @@ export function Home () {
           </div>
         </div>
         <div className='pokemonList mt-3'>
-            {displayPokemons}
+            {displayItems}
         </div>
         <div className='mt-3 row justify-center'>
           <ReactPaginate
-            pageCount={Math.ceil(allPokemons.length / numPokemons)}
+            pageCount={Math.ceil(allItems.length / numItems)}
             onPageChange={changePage}
             {...PAGER_OPTIONS}
           />

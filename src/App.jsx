@@ -5,6 +5,8 @@ import { Home } from './Pages/Home'
 import { Pokemon } from './Pages/Pokemon'
 import { NavBar } from './Components/NavBar'
 import { GlobalProvider } from './Context'
+import { Items } from './Pages/Items'
+import { Item } from './Pages/Item'
 
 function App () {
   return (
@@ -14,6 +16,8 @@ function App () {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/pokemon/:id' element={<Pokemon/>}/>
+            <Route path='/items' element={<Items/>}/>
+            <Route path='/item/:id' element={<Item />}/>
           </Routes>
       </GlobalProvider>
     </BrowserRouter>

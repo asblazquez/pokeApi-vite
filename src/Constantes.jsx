@@ -1,6 +1,8 @@
 export const URL = {
   allPokemons: 'https://pokeapi.co/api/v2/pokemon?limit=',
-  pokemon: 'https://pokeapi.co/api/v2/pokemon/'
+  pokemon: 'https://pokeapi.co/api/v2/pokemon/',
+  hability: 'https://pokeapi.co/api/v2/ability/',
+  allItems: 'https://pokeapi.co/api/v2/item?limit='
 }
 
 export const COLORES_TIPOS = {
@@ -25,13 +27,40 @@ export const COLORES_TIPOS = {
   '???': '#6BA294'
 }
 
+export const COLORER_ATRIBUTOS = {
+  countable: '#FF0000',
+  consumable: '#FAC000',
+  'usable-overworld': '#3FD8FF',
+  'usable-battle': '#3FA129',
+  holdable: '#EF4179',
+  'holdable-active': '#EF4179',
+  'holdable-passive': '#EF4179',
+  'holdable-event': '#EF4179',
+  underground: '#EF4179',
+  'on-misc': '#EF4179',
+  'on-super': '#EF4179',
+  'on-hyper': '#EF4179',
+  'on-max': '#EF4179',
+  'pocket-all': '#EF4179',
+  'pocket-machines': '#EF4179',
+  'pocket-mail': '#EF4179',
+  'pocket-berry': '#EF4179',
+  'pocket-battle': '#EF4179',
+  'pocket-key-items': '#EF4179',
+  'pocket-coupons': '#EF4179',
+  'pocket-catch': '#EF4179',
+  'pocket-berries': '#EF4179',
+  'pocket-tms': '#EF4179',
+  'pocket-misc': '#EF4179'
+}
+
 export const COLORES_STATS = {
-  hp: '#FF0000',
-  attack: '#FF8000',
-  defense: '#FAC000',
-  'special-attack': '#3FD8FF',
-  'special-defense': '#3FA129',
-  speed: '#EF4179'
+  hp: '#33ff00',
+  attack: '#ff4000',
+  defense: '#00ffd0',
+  'special-attack': '#7700ff',
+  'special-defense': '#ff0099',
+  speed: '#b6bf00'
 }
 
 export const PAGER_OPTIONS = {
